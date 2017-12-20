@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 int count = -1;
 double stack[100];
 
@@ -22,6 +23,8 @@ int main(int argc, char *argv[]) {
     char in[10];
 	while(strcmp(in,"=")!=0)
 	{
+		/*Filling the array with operators and operands.
+		Performed the implementation of a calculator with reverse entry (enter numbers first, then signs).*/
 		printf("Enter operand or operator:");
 		gets(in);
 		char* ends;
@@ -31,6 +34,7 @@ int main(int argc, char *argv[]) {
 		}
 		else if (strcmp(in, "=")!=0)
         {
+	    /*Commands for the calculator*/		
             double b=pop();
             double a=pop();
             double c=0;
